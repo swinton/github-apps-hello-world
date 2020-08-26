@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const logger = require('pino')();
 
 const { Octokit } = require('@octokit/core');
