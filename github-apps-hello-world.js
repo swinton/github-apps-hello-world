@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const logger = require('pino')();
+const logger = require('pino')({ level: process.env.LOG_LEVEL || 'info' });
 
 const { Octokit } = require('@octokit/core');
 const { createAppAuth } = require('@octokit/auth-app');
@@ -23,9 +23,11 @@ async function main() {
       owner: 'demo-days',
       repo: 'Spoon-Knife',
       title: 'Hello world',
-      body: ':wave: :earth_americas:'
+      body: ':wave: :earth_americas:\n\n![fellowshipoftheclaps](https://user-images.githubusercontent.com/27806/91333726-91c46f00-e793-11ea-9724-dc2e18ca28d0.gif)'
     });
-    logger.info(issue);
+    logger.trace(issue);
+
+    process.stdout.write(`${issue.data.html_url} 🚀\n`);
   } catch (e) {
     logger.error(e);
     process.exit(1);
