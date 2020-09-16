@@ -1,6 +1,6 @@
 {
   "name": "github-apps-hello-world",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "author": "Steve Winton <stevewinton@gmail.com> (https://github.com/swinton)",
   "main": "github-apps-hello-world.js",
