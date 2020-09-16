@@ -23,7 +23,8 @@ async function main() {
       owner: 'demo-days',
       repo: 'Spoon-Knife',
       title: 'Hello world',
-      body: ':wave: :earth_americas:\n\n![fellowshipoftheclaps](https://user-images.githubusercontent.com/27806/91333726-91c46f00-e793-11ea-9724-dc2e18ca28d0.gif)'
+      body:
+        ':wave: :earth_americas:\n\n![fellowshipoftheclaps](https://user-images.githubusercontent.com/27806/91333726-91c46f00-e793-11ea-9724-dc2e18ca28d0.gif)'
     });
     logger.trace(issue);
 
